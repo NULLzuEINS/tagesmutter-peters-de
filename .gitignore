@@ -3,6 +3,7 @@
 !/app
 !/config/
 !/.editorconfig
+!/.env.dist
 !/.gitignore
 !/docker-compose.yml
 !/Dockerfile
