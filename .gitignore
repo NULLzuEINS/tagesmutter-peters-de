@@ -1,6 +1,6 @@
-*
+/*
 
-!/app/
+!/app
 !/config/
 !/.editorconfig
 !/.gitignore

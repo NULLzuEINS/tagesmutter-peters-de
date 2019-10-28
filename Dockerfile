@@ -1,10 +1,3 @@
-FROM vergissberlin/hugo as build
-LABEL com.centurylinklabs.watchtower.enable="false"
-
-WORKDIR /app
-COPY ./ /app
-RUN hugo
-
 FROM nginx:alpine
 LABEL maintainer André Lademann <vergissberlin@googlemail.com>
 LABEL com.centurylinklabs.watchtower.enable="true"
