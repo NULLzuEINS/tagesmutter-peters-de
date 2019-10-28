@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  web:
+    image: registry.gitlab.com/vergissberlin/static:latest 
+    labels:
+      com.centurylinklabs.watchtower.enable: true
+    environment:
+      - VIRTUAL_HOST=${DOMAINS}
+      - VIRTUAL_NETWORK=${NETWORK}
+      - LETSENCRYPT_HOST=${DOMAINS}
+      - LETSENCRYPT_EMAIL=info@andrelademann.de
+    restart: on-failure
+networks:
+  default:
+    external:
+      name: ${NETWORK}
+

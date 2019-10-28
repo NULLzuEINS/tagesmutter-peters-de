@@ -1,0 +1,10 @@
+*
+
+!/app/
+!/config/
+!/.editorconfig
+!/.gitignore
+!/docker-compose.yml
+!/Dockerfile
+!/LICENSE
+!/README.md
