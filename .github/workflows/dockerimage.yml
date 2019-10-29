@@ -25,3 +25,4 @@ jobs:
         registry: docker.pkg.github.com
         snapshot: true
         tag_names: true
+        cache: true
