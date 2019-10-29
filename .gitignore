@@ -1,7 +1,6 @@
 /*
 
 !/app
-!/config/
 !/.editorconfig
 !/.env.dist
 !/.gitignore
@@ -9,3 +8,4 @@
 !/Dockerfile
 !/LICENSE
 !/README.md
+!/rootfs/
