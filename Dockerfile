@@ -23,6 +23,9 @@ WORKDIR /var/www/html
 USER nobody
 COPY --chown=nobody ./app /var/www/html/
 
+# Expose the port nginx is reachable on
+EXPOSE 8080
+
 # Let supervisord start nginx & php-fpm
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
 
