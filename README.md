@@ -54,7 +54,7 @@ docker-compose logs -f
 
 ```bash
 npm i -g less less-watch-compiler
-less-watch-compiler app/less/ app/css/
+less-watch-compiler --minified --source-map --main-file styles.less  app/less/ app/css/
 ```
 
 ### Stoping
