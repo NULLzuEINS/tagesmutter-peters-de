@@ -29,7 +29,7 @@ scp -r nze:/var/docker/tagesmutter-peters-de/app .
 scp -r ./app nze:/var/docker/tagesmutter-peters-de/app
 ```
 
-## Using
+## Development
 
 ### Configure
 
@@ -48,6 +48,13 @@ docker-compose up -d
 
 ```bash
 docker-compose logs -f
+```
+
+### Compile
+
+```bash
+npm i -g less less-watch-compiler
+less-watch-compiler app/less/ app/css/
 ```
 
 ### Stoping
