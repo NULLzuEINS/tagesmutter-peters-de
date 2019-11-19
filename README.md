@@ -1,5 +1,7 @@
 # tagesmutter-peters.de - Generated static page
 
+This is a private website.
+
 ## Build and push
 
 ```bash
