@@ -31,6 +31,10 @@ scp -r nze:/var/docker/tagesmutter-peters.de/www/app .
 scp -r ./app nze:/var/docker/tagesmutter-peters.de/www/app
 ```
 
+```bash
+rsync -a ./app nze:/var/docker/tagesmutter-peters.de/www/app
+```
+
 ## Development
 
 ### Configure
