@@ -4,12 +4,17 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Sie suchen eine ausgebildete und erfahrene, liebevolle Tagesmutter mit Kompetenz und Einfühlungsvermögen in Leipzig? Hier finden Sie Ihre individuelle Kinderbetreuung."/>
-	<meta name="keywords"	content="Tagesmutter, Leipzig, Südvorstadt, Kindertagespflege, ausgebildet, erfahren, Kind, Förderung, familiäre Atmosphäre"/>
+	<meta name="description"
+				content="Suchen Sie eine ausgebildete und erfahrene, liebevolle Tagesmutter mit Kompetenz und Einfühlungsvermögen in Leipzig? Hier finden Sie Ihre individuelle Kinderbetreuung."/>
+	<meta name="keywords"
+				content="Tagesmutter, Leipzig, Südvorstadt, Kindertagespflege, ausgebildet, erfahren, Kind, Förderung, familiäre Atmosphäre"/>
 	<meta name="author" content="Jeanine Peters">
 	<meta name="robots" content="index, follow"/>
+
+	<!-- Set viewport. -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
 	<style>html { -webkit-text-size-adjust: 100%; }</style>
+
 	<title>Kindertagespflege in Leipzig - Jeanine Peters</title>
 
 	<link rel="apple-touch-icon" href="/app/assets/ios/icon/appicon.png">
@@ -34,11 +39,24 @@
 
 	<!-- WebApp Android -->
 	<link rel="manifest" href="manifest.json">
-	<link rel="icon" sizes="128x128" href="/app/assets/android/appicon.png">
-	<link rel="icon" sizes="192x192" href="/app/assets/android/drawable-xxxhdpi/appicon.png">
+	<link rel="icon" sizes="128x128" href="app/assets/android/appicon.png">
+	<link rel="icon" sizes="192x192" href="app/assets/android/drawable-xxxhdpi/appicon.png">
 
-	<link href="/css/styles.css" rel="stylesheet">
-	<link href="/fonts/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- Custom CSS -->
+	<link href="css/daymother.css" rel="stylesheet">
+
+	<!-- Custom Fonts -->
+	<link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
 </head>
 
 <body id="page-top" class="index">
@@ -269,17 +287,60 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2">
-				<div class="row">
-					<div class="col-xs-12 col-sm-6 form-group">
-						<a href="mailto:peters.jeanine+tagesmutter@gmail.com" class="btn btn-block btn-success btn-lg">
-							<i class="fa fa-file-text-o fa-1x"></i>&nbsp;	E-Mail</a>
+				<!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+				<!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+				<form name="sentMessage" id="contactForm" novalidate>
+					<div class="row control-group">
+						<div class="form-group col-xs-12 floating-label-form-group controls">
+							<label>Name</label>
+							<input type="text" class="form-control" placeholder="Name" id="name" required
+										 data-validation-required-message="Please enter your name.">
+
+							<p class="help-block text-danger"></p>
+						</div>
 					</div>
-					<div class="col-xs-12 col-sm-6 form-group">
-						<a href="tel:034160444677" class="btn btn-block btn-info btn-lg">
-							<i class="fa fa-phone fa-1x"></i>&nbsp;	Anrufen
-						</a>
+					<div class="row control-group">
+						<div class="form-group col-xs-12 floating-label-form-group controls">
+							<label>Email&shy;addresse</label>
+							<input type="email" class="form-control" placeholder="Email Addresse" id="email" required
+										 data-validation-required-message="Bitte geben Sie ihre Emailadresse ein.">
+
+							<p class="help-block text-danger"></p>
+						</div>
 					</div>
-				</div>
+					<div class="row control-group">
+						<div class="form-group col-xs-12 floating-label-form-group controls">
+							<label>Telefon&shy;nummer</label>
+							<input type="tel" class="form-control" placeholder="Telefonnummer" id="phone" required
+										 data-validation-required-message="Bitte geben Sie Ihre Telefonnummer ein.">
+
+							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+					<div class="row control-group">
+						<div class="form-group col-xs-12 floating-label-form-group controls">
+							<label>Nachricht</label>
+							<textarea rows="5" class="form-control" placeholder="Nachricht" id="message" required
+												data-validation-required-message="Bitte geben Sie eine Nachricht ein."></textarea>
+
+							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+					<br>
+
+					<div id="success"></div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 form-group">
+							<button type="submit" class="btn btn-block btn-success btn-lg">
+								<i class="fa fa-file-text-o fa-1x"></i>&nbsp;	Senden</button>
+						</div>
+						<div class="col-xs-12 col-sm-6 form-group">
+							<a href="tel:034160444677" class="btn btn-block btn-info btn-lg">
+								<i class="fa fa-phone fa-1x"></i>&nbsp;	Anrufen
+							</a>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>

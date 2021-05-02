@@ -22,13 +22,13 @@ docker-compose -f config/watchtower/docker-compose.watchdog.yml up -d
 ### Downsync
 
 ```bash
-scp -r nze:/var/docker/tagesmutter-peters-de/app .
+scp -r nze:/var/docker/tagesmutter-peters.de/www/app .
 ```
 
 ### Upsync
 
 ```bash
-scp -r ./app nze:/var/docker/tagesmutter-peters-de/app
+scp -r ./app nze:/var/docker/tagesmutter-peters.de/www/app
 ```
 
 ## Development
