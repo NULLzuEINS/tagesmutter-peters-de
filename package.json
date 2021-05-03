@@ -8,7 +8,9 @@
   "license": "MIT",
   "private": true,
 	"scripts": {
-		"dev": "./node_modules/.bin/browser-sync start --server --https --files 'app/js/*.js' --files 'app/css/*.css' app"
+		"dev": "./node_modules/.bin/browser-sync start --server --https --files 'app/js/*.js' --files 'app/css/*.css' app",
+		"deploy": "rsync -a -P ./app/ nze:/var/docker/tagesmutter-peters.de/www/",
+		"pull": "rsync -a -P nze:/var/docker/tagesmutter-peters.de/www/ ./app/"
 	},
   "devDependencies": {
     "browser-sync": "^2.26.14"

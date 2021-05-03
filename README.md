@@ -22,13 +22,13 @@ docker-compose -f config/watchtower/docker-compose.watchdog.yml up -d
 ### Downsync
 
 ```bash
-rsync -a -P nze:/var/docker/tagesmutter-peters.de/www/app .
+yarn pull
 ```
 
 ### Upsync
 
 ```bash
-rsync -a -P ./app nze:/var/docker/tagesmutter-peters.de/www/app
+yarn deploy
 ```
 
 ## Development
