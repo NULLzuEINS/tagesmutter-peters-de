@@ -12,10 +12,9 @@ RUN apk --no-cache add php7 php7-fpm php7-json php7-openssl php7-curl \
 COPY ./rootfs /
 
 # Make sure files/folders needed by the processes are accessable when they run under the nobody user
-#RUN chown -R nobody.nobody /run && \
-#  chown -R nobody.nobody /var/lib/nginx && \
-#  chown -R nobody.nobody /var/tmp/nginx && \
-#  chown -R nobody.nobody /var/log/nginx
+#RUN chown -R nobody.nobody /var/lib/nginx && \
+#    chown -R nobody.nobody /var/tmp/nginx && \
+#    chown -R nobody.nobody /var/log/nginx#
 
 # Switch to use a non-root user from here on
 WORKDIR /var/www/html
@@ -23,7 +22,7 @@ USER nobody
 COPY --chown=nobody ./app /var/www/html/
 
 # Expose the port nginx is reachable on
-EXPOSE 8080
+EXPOSE 80
 
 # Let supervisord start nginx & php-fpm
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]

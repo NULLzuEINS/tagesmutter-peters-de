@@ -2,8 +2,13 @@ version: "3.7"
 
 services:
   app:
-    image: nullzueins/tagesmutter-peters
+    image: nginx
+    #image: nullzueins/tagesmutter-peters
+    environment:
+      - NGINX_HOST=tagesmutter-peters.de
+      - NGINX_PORT=80
     labels:
+      - com.centurylinklabs.watchtower.enable=true
       - traefik.enable=true
       - traefik.docker.network=${NETWORK}
       - traefik.http.routers.${COMPOSE_PROJECT_NAME}.rule=Host(${DOMAINS})
@@ -11,7 +16,8 @@ services:
       - traefik.http.routers.${COMPOSE_PROJECT_NAME}.tls=true
       - traefik.http.routers.${COMPOSE_PROJECT_NAME}.tls.certresolver=letsencrypt
     volumes:
-      - ./app/:/var/www/html/:ro
+      - ./app:/usr/share/nginx/html:ro
+    working_dir: /usr/share/nginx/html
     restart: unless-stopped
 
 networks:
