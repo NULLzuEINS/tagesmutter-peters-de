@@ -10,7 +10,9 @@
 	"scripts": {
 		"dev": "./node_modules/.bin/browser-sync start --server --https --files 'app/js/*.js' --files 'app/css/*.css' app",
 		"deploy": "rsync --delete --exclude-from=.rsyncignore -a -P ./ nze:/var/docker/tagesmutter-peters.de/www/",
-		"pull": "rsync -a -P nze:/var/docker/tagesmutter-peters.de/www/ ./"
+		"pull": "rsync -a -P nze:/var/docker/tagesmutter-peters.de/www/ ./",
+		"docker:build": "docker build -t nullzueins/tagesmutter-peters .",
+		"docker:push": "docker push nullzueins/tagesmutter-peters"
 	},
   "devDependencies": {
     "browser-sync": "^2.26.14"

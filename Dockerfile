@@ -1,6 +1,6 @@
 FROM alpine
 LABEL com.centurylinklabs.watchtower.enable="true"
-LABEL Maintainer="André Lademann <vergissberlin@googlemail.com>" \
+LABEL Maintainer="André Lademann <andre@nullzueins.com>" \
       Description="Website."
 
 # Install packages
@@ -12,11 +12,10 @@ RUN apk --no-cache add php7 php7-fpm php7-json php7-openssl php7-curl \
 COPY ./rootfs /
 
 # Make sure files/folders needed by the processes are accessable when they run under the nobody user
-RUN chown -R nobody.nobody /run && \
-  chown -R nobody.nobody /var/lib/nginx && \
-  chown -R nobody.nobody /var/tmp/nginx && \
-  chown -R nobody.nobody /var/log/nginx
-
+#RUN chown -R nobody.nobody /run && \
+#  chown -R nobody.nobody /var/lib/nginx && \
+#  chown -R nobody.nobody /var/tmp/nginx && \
+#  chown -R nobody.nobody /var/log/nginx
 
 # Switch to use a non-root user from here on
 WORKDIR /var/www/html
