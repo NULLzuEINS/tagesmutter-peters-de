@@ -4,6 +4,7 @@
 !/.editorconfig
 !/.env.dist
 !/.gitignore
+!/.rsyncignore
 !/bs-config.js
 !/docker-compose.yml
 !/Dockerfile
