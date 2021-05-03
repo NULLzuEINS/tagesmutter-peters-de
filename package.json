@@ -1,0 +1,16 @@
+{
+  "name": "tagesmutter-peters-de",
+  "version": "1.0.0",
+  "description": "Homepage of Jeanine Peters children care",
+  "main": "index.js",
+  "repository": "git@github.com:NULLzuEINS/tagesmutter-peters-de.git",
+  "author": "andre@nullzueins.com",
+  "license": "MIT",
+  "private": true,
+	"scripts": {
+		"dev": "./node_modules/.bin/browser-sync start --server --https --files 'app/js/*.js' --files 'app/css/*.css' app"
+	},
+  "devDependencies": {
+    "browser-sync": "^2.26.14"
+  }
+}
