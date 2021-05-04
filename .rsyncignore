@@ -5,6 +5,7 @@
 .gitignore
 .rsyncignore
 bs-config.js
+docker-compose.development.yml
 Dockerfile
 LICENSE
 package.jsonfile

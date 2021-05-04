@@ -10,6 +10,10 @@ indent_style = tab
 indent_size = 2
 tab_width = 2
 
+[*.yml]
+indent_style = space
+
+
 # We recommend you to keep these unchanged
 end_of_line = lf
 charset = utf-8
