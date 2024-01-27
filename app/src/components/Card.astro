@@ -1,16 +1,16 @@
 ---
 interface Props {
-	title: string;
-	body: string;
-	href: string;
+	title: string
+	body: string
+	href: string
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body } = Astro.props
 ---
 
-<li class="p-5 border rounded-md border-gray-600 bg-gray-800">
+<li class="p-5 border rounded-md border-gray-600 bg-gray-800 my-3">
 	<a href={href}>
-		<h2>
+		<h2 class="text-gray-400 font-medium text-lg pb-1">
 			{title}
 			<span>&rarr;</span>
 		</h2>

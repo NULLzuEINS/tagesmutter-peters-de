@@ -2,6 +2,6 @@ version: "3.7"
 
 services:
   app:
-    build: .
+    image: nullzueins/tagesmutter-peters
     ports:
       - 70:80
