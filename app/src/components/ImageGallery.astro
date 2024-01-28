@@ -1,0 +1,59 @@
+---
+const images = [
+	{
+		src: 'images/gallery/box.jpg',
+		alt: 'Box'
+	},
+	{
+		src: 'images/gallery/boxsmile.jpg',
+		alt: 'Box Smile'
+	},
+	{
+		src: 'images/gallery/laydown.jpg',
+		alt: 'Lay Down'
+	},
+	{
+		src: 'images/gallery/traindance.jpg',
+		alt: 'Train Dance'
+	},
+	{
+		src: 'images/gallery/trainspotter.jpg',
+		alt: 'Train Spotter'
+	}
+]
+
+let selectedImage = images[0]
+
+const enlargeImage = (image: { src: string; alt: string }) => {
+	selectedImage = image as { src: string; alt: string }
+	return selectedImage
+}
+---
+
+<div class="grid gap-4 my-5">
+	{
+		selectedImage && (
+			<div>
+				<img
+					src={selectedImage.src}
+					alt={selectedImage.alt}
+					class="h-auto w-full max-w-full rounded-md object-cover object-center md:h-[480px] border-12 border-gray-200"
+				/>
+			</div>
+		)
+	}
+
+	<div class="grid grid-cols-5 gap-2">
+		{
+			images.map((image) => (
+				<div>
+					<img
+						src={image.src}
+						alt={image.alt}
+						class="object-cover object-center h-20 max-w-full rounded-md cursor-pointer"
+					/>
+				</div>
+			))
+		}
+	</div>
+</div>

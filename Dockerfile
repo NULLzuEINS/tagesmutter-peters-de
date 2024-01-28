@@ -1,23 +1,34 @@
-FROM webdevops/php-nginx:7.4
+FROM node:lts as build
 
 LABEL com.centurylinklabs.watchtower.enable="true"
 LABEL Maintainer="André Lademann <andre@nullzueins.com>" \
       Description="Website."
 
-COPY --chown=application ./app /app
+COPY ./app /app
 
-ENV WEB_DOCUMENT_INDEX=index.html
+# Install pnpm
+RUN npm install -g pnpm
 
-# COPY ./rootfs /
-# Make sure files/folders needed by the processes are accessable when they run under the nobody user
-#RUN chown -R nobody.nobody /var/lib/nginx && \
-#    chown -R nobody.nobody /var/tmp/nginx && \
-#    chown -R nobody.nobody /var/log/nginx#
+# Install dependencies
+WORKDIR /app
+RUN pnpm install
+# RUN npm install
 
-# Switch to use a non-root user from here on
-#WORKDIR /var/www/html
-#USER nobody
-#COPY --chown=nobody ./app /var/www/html/
 
-# Configure a healthcheck to validate that everything is up&running
-HEALTHCHECK --timeout=10s CMD curl --silent --fail http://127.0.0.1:80/fpm-ping
+# Build the app
+RUN pnpm build
+
+# Stage 2: Setup runtime container
+FROM nginx:alpine
+
+# Copy our build from the previous stage
+COPY --from=build /app/dist /usr/share/nginx/html
+
+# Expose port 80
+EXPOSE 80
+
+# Run the web service on container startup
+CMD ["nginx", "-g", "daemon off;"]
+
+# Healthcheck
+HEALTHCHECK --interval=5s --timeout=3s --retries=3 CMD wget --quiet --tries=1 --spider http://localhost || exit 1

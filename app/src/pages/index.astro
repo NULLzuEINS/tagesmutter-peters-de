@@ -1,37 +1,107 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Card from '../components/Card.astro'
+import Section from '../components/Section.astro'
+import ImageGallery from '../components/ImageGallery.astro'
+import ImageCarousel from '../components/ImageCarousel.astro'
+import Calendar from '../components/Calendar.astro'
+import Children from '../components/Children.astro'
+import Contact from '../components/Contact.astro'
 ---
 
 <Layout title="Welcome to Astro.">
-	<main class="flex flex-col items-center justify-center min-h-screen">
-		<h1 class="text-slate-500 text-teal-600 font-extralight text-4xl pb-2">Tagesmutter Peters</h1>
-		<p class="text-slate-300">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
+	<main>
+		<Section>
+			<h2>Bilder-Galerie</h2>
+			<ImageGallery />
 
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+			<h2>Bilder-Karussel</h2>
+			<ImageCarousel />
+
+			<Calendar />
+
+		</Section>
+
+		<Section classOutside="bg-lime-400">
+			<h2 class="pb-2 text-4xl font-bold text-lime-600" id="liebe-eltern">Liebe Eltern</h2>
+			<p class="text-slate-300">
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, porro nesciunt numquam nisi explicabo
+					inventore tenetur autem odit animi, et harum dolorum fuga illo dolore? Voluptatum, quidem, fugiat debitis
+					facere est, hic temporibus exercitationem nemo praesentium fuga nihil! Est consectetur qui eveniet!
+				</p>
+				<p>
+					Assumenda porro a sed, similique rem hic ullam dolorem ad, ratione perspiciatis nisi laborum laudantium earum
+					quo cupiditate! Quasi quisquam rerum eos. Porro, quae ea. Molestiae temporibus quas et assumenda voluptatem
+					maiores autem aperiam itaque quasi, voluptates ipsa, repellat dolores sint. Minima?
+				</p>
+				<p>
+					Repudiandae sequi tenetur ullam, magnam dolorem, neque dicta reprehenderit odit deserunt voluptatem quae
+					asperiores aspernatur ab explicabo est officia accusamus doloribus. Qui, porro. Neque commodi dolorem adipisci
+					deserunt provident ad amet quis vel, beatae libero eaque, illo voluptatem sequi fuga nisi autem.
+				</p>
+				<p>
+					Accusantium sapiente mollitia maxime aspernatur consectetur corrupti fugit similique. Possimus iste incidunt
+					architecto aliquid nisi, fugiat corporis pariatur. Sunt qui repellat recusandae repudiandae eius at quasi
+					distinctio dolore! Reprehenderit error, pariatur ipsa provident beatae explicabo blanditiis aut nesciunt
+					aperiam ex sunt! Numquam.
+				</p>
+			</p>
+		</Section>
+
+		<Section classOutside="bg-slate-700" classInside="text-slate-400 antialiased">
+			<h2 class="pt-4 pb-2 text-4xl antialiased font-bold text-lime-600" id="über-mich">Über mich</h2>
+			<p class="text-slate-300">
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, porro nesciunt numquam nisi explicabo
+					inventore tenetur autem odit animi, et harum dolorum fuga illo dolore? Voluptatum, quidem, fugiat debitis
+					facere est, hic temporibus exercitationem nemo praesentium fuga nihil! Est consectetur qui eveniet!
+				</p>
+				<p>
+					Assumenda porro a sed, similique rem hic ullam dolorem ad, ratione perspiciatis nisi laborum laudantium earum
+					quo cupiditate! Quasi quisquam rerum eos. Porro, quae ea. Molestiae temporibus quas et assumenda voluptatem
+					maiores autem aperiam itaque quasi, voluptates ipsa, repellat dolores sint. Minima?
+				</p>
+				<p>
+					Repudiandae sequi tenetur ullam, magnam dolorem, neque dicta reprehenderit odit deserunt voluptatem quae
+					asperiores aspernatur ab explicabo est officia accusamus doloribus. Qui, porro. Neque commodi dolorem adipisci
+					deserunt provident ad amet quis vel, beatae libero eaque, illo voluptatem sequi fuga nisi autem.
+				</p>
+				<p>
+					Accusantium sapiente mollitia maxime aspernatur consectetur corrupti fugit similique. Possimus iste incidunt
+					architecto aliquid nisi, fugiat corporis pariatur. Sunt qui repellat recusandae repudiandae eius at quasi
+					distinctio dolore! Reprehenderit error, pariatur ipsa provident beatae explicabo blanditiis aut nesciunt
+					aperiam ex sunt! Numquam.
+				</p>
+			</p>
+		</Section>
+
+		<Section classOutside="bg-lime-200">
+			<h2 class="pt-4 pb-2 text-4xl font-bold text-lime-600" id="leistungen">Leistungen</h2>
+			<p class="text-slate-300">
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, porro nesciunt numquam nisi explicabo
+					inventore tenetur autem odit animi, et harum dolorum fuga illo dolore? Voluptatum, quidem, fugiat debitis
+					facere est, hic temporibus exercitationem nemo praesentium fuga nihil! Est consectetur qui eveniet!
+				</p>
+				<p>
+					Assumenda porro a sed, similique rem hic ullam dolorem ad, ratione perspiciatis nisi laborum laudantium earum
+					quo cupiditate! Quasi quisquam rerum eos. Porro, quae ea. Molestiae temporibus quas et assumenda voluptatem
+					maiores autem aperiam itaque quasi, voluptates ipsa, repellat dolores sint. Minima?
+				</p>
+				<p>
+					Repudiandae sequi tenetur ullam, magnam dolorem, neque dicta reprehenderit odit deserunt voluptatem quae
+					asperiores aspernatur ab explicabo est officia accusamus doloribus. Qui, porro. Neque commodi dolorem adipisci
+					deserunt provident ad amet quis vel, beatae libero eaque, illo voluptatem sequi fuga nisi autem.
+				</p>
+				<p>
+					Accusantium sapiente mollitia maxime aspernatur consectetur corrupti fugit similique. Possimus iste incidunt
+					architecto aliquid nisi, fugiat corporis pariatur. Sunt qui repellat recusandae repudiandae eius at quasi
+					distinctio dolore! Reprehenderit error, pariatur ipsa provident beatae explicabo blanditiis aut nesciunt
+					aperiam ex sunt! Numquam.
+				</p>
+			</p>
+		</Section>
+
+		<Contact />
 	</main>
 </Layout>
