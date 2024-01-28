@@ -1,19 +1,29 @@
 {
-  "name": "app",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.4.1",
-    "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.2.5",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3"
-  }
+	"name": "tagesmutter-peters",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.4.1",
+		"@astrojs/tailwind": "^5.1.0",
+		"astro": "^4.2.5",
+		"flowbite": "^2.2.1",
+		"tailwindcss": "^3.4.1",
+		"typescript": "^5.3.3"
+	},
+	"pnpm": {
+		"overrides": {
+			"rollup": "npm:@rollup/wasm-node"
+		}
+	},
+	"devDependencies": {
+		"prettier": "^3.2.4",
+		"prettier-plugin-tailwindcss": "^0.5.11"
+	}
 }
