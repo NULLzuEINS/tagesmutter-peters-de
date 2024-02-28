@@ -28,5 +28,8 @@ jobs:
 
       - name: Push Docker image
         run: |
+          git fetch --tags
+          latest_tag=$(git describe --tags `git rev-list --tags --max-count=1`)
+          echo "Latest tag: $latest_tag"
           docker push ghcr.io/nullzueins/tagesmutter-peters-de/app:latest
           docker push ghcr.io/nullzueins/tagesmutter-peters-de/app:$latest_tag
