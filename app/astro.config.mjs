@@ -4,8 +4,7 @@ import tailwind from '@astrojs/tailwind'
 // https://astro.build/config
 export default defineConfig({
 	build: {
-		site: 'https://nullzueins.github.io/tagesmutter-peters-de/',
-		base: '/tagesmutter-peters-de/'
+		site: 'https://tagesmutter-peters-de',
 	},
 	integrations: [tailwind()],
 	output: "static",
