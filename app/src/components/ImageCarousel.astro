@@ -1,75 +1,49 @@
 ---
-const images = [
-	{
-		src: 'images/gallery/box.jpg',
-		alt: 'Box'
-	},
-	{
-		src: 'images/gallery/boxsmile.jpg',
-		alt: 'Box Smile'
-	},
-	{
-		src: 'images/gallery/laydown.jpg',
-		alt: 'Lay Down'
-	},
-	{
-		src: 'images/gallery/traindance.jpg',
-		alt: 'Train Dance'
-	},
-	{
-		src: 'images/gallery/trainspotter.jpg',
-		alt: 'Train Spotter'
-	}
-]
+export interface Props {
+    items: Array<{
+			src: string;
+			alt: string;
+		}>;
+		caption?: Boolean;
+}
+
+const { items, caption  } = Astro.props as Props;
+
 ---
 
 <div id="default-carousel" class="relative w-full my-6" data-carousel="slide">
 	<div class="relative overflow-hidden rounded-lg h-80 md:h-96">
 		{
-			images.map((image) => (
-				<div class="hidden duration-700 ease-in-out" data-carousel-item>
+			items.map((image) => (
+				<figure class="hidden duration-700 ease-in-out" data-carousel-item>
 					<img
 						src={image.src}
 						alt={image.alt}
 						class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
 					/>
-				</div>
-			))
+
+					{caption && 
+					<figcaption class="absolute bottom-0 flex items-start justify-center w-full h-24 pt-4 text-xl font-semibold text-gray-300 bg-gray-800 bg-opacity-50 rounded-lg dark:bg-gray-800">
+						{image.alt}
+					</figcaption>
+					}
+				</figure>
+		))
 		}
 	</div>
 
-	<!-- Slider indicators -->
 	<div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2 rtl:space-x-reverse">
+			{
+			items.map((image) => (
 		<button
 			type="button"
 			class="w-3 h-3 rounded-full"
 			aria-current="true"
-			aria-label="Slide 1"
+			aria-label={image.alt}
+			title={image.alt}
 			data-carousel-slide-to="0"></button>
-		<button
-			type="button"
-			class="w-3 h-3 rounded-full"
-			aria-current="false"
-			aria-label="Slide 2"
-			data-carousel-slide-to="1"></button>
-		<button
-			type="button"
-			class="w-3 h-3 rounded-full"
-			aria-current="false"
-			aria-label="Slide 3"
-			data-carousel-slide-to="2"></button>
-		<button
-			type="button"
-			class="w-3 h-3 rounded-full"
-			aria-current="false"
-			aria-label="Slide 4"
-			data-carousel-slide-to="3"></button>
-		<button
-			type="button"
-			class="w-3 h-3 rounded-full"
-			aria-current="false"
-			aria-label="Slide 5"
-			data-carousel-slide-to="4"></button>
+			))
+		}
 	</div>
 	<!-- Slider controls -->
 	<button
