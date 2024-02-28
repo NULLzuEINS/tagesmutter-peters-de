@@ -3,7 +3,7 @@
 	"short_name": "Tagesmutter",
 	"icons": [
 		{
-			"src": "images/jeanine-peters.png",
+			"src": "images/jeanine-peters-app.png",
 			"type": "image/png",
 			"sizes": "256x256"
 		}
