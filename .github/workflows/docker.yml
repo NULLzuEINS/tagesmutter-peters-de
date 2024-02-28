@@ -11,7 +11,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
       - name: Login to GitHub Docker Registry
         uses: docker/login-action@v1
         with:
@@ -21,10 +20,13 @@ jobs:
 
       - name: Build Docker image
         run: |
+          git fetch --tags
+          latest_tag=$(git describe --tags `git rev-list --tags --max-count=1`)
+          echo "Latest tag: $latest_tag"
           docker build . --tag ghcr.io/nullzueins/tagesmutter-peters-de/app:latest
-          docker tag ghcr.io/nullzueins/tagesmutter-peters-de/app:latest ghcr.io/nullzueins/tagesmutter-peters-de/app:${{ steps.git_tag.outputs.tag }}
+          docker tag ghcr.io/nullzueins/tagesmutter-peters-de/app:latest ghcr.io/nullzueins/tagesmutter-peters-de/app:$latest_tag
 
       - name: Push Docker image
         run: |
           docker push ghcr.io/nullzueins/tagesmutter-peters-de/app:latest
-          docker push ghcr.io/nullzueins/tagesmutter-peters-de/app:${{ steps.git_tag.outputs.tag }}
+          docker push ghcr.io/nullzueins/tagesmutter-peters-de/app:$latest_tag
