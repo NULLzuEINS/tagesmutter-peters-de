@@ -1,0 +1,15 @@
+{
+	"name": "Tagesmutter Jeanine Peters",
+	"short_name": "Tagesmutter",
+	"icons": [
+		{
+			"src": "images/jeanine-peters.png",
+			"type": "image/png",
+			"sizes": "256x256"
+		}
+	],
+	"start_url": "/index.html",
+	"background_color": "#ffffff",
+	"theme_color": "#84CC16",
+	"display": "standalone"
+}
