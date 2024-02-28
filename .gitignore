@@ -3,6 +3,7 @@
 !/app
 !/.editorconfig
 !/.env.dist
+!/.github
 !/.gitignore
 !/.rsyncignore
 !/bs-config.js
