@@ -32,12 +32,12 @@ const { items, caption  } = Astro.props as Props;
 		}
 	</div>
 
-	<div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2 rtl:space-x-reverse">
+	<div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-12 md:bottom-5 left-1/2 rtl:space-x-reverse">
 			{
 			items.map((image) => (
 		<button
 			type="button"
-			class="w-3 h-3 rounded-full"
+			class="h-5 w-5 md:w-3 md:h-3 rounded-full"
 			aria-current="true"
 			aria-label={image.alt}
 			title={image.alt}
