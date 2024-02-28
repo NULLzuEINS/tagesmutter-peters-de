@@ -3,6 +3,7 @@
 !/app
 !/.editorconfig
 !/.env.dist
+!/.dockerignore
 !/.github
 !/.gitignore
 !/.rsyncignore

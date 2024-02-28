@@ -2,7 +2,7 @@ FROM node:lts as build
 
 LABEL com.centurylinklabs.watchtower.enable="true"
 LABEL Maintainer="André Lademann <andre@nullzueins.com>" \
-      Description="Website."
+      Description="Website of Jeanine Peters"
 
 COPY ./app /app
 
@@ -12,8 +12,6 @@ RUN npm install -g pnpm
 # Install dependencies
 WORKDIR /app
 RUN pnpm install
-# RUN npm install
-
 
 # Build the app
 RUN pnpm build
