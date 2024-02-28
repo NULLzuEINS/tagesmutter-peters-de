@@ -30,7 +30,7 @@ const enlargeImage = (image: { src: string; alt: string }) => {
 }
 ---
 
-<div class="grid gap-4 my-5">
+<div class="my-5 grid gap-4">
 	{
 		selectedImage && (
 			<div>
@@ -50,7 +50,7 @@ const enlargeImage = (image: { src: string; alt: string }) => {
 					<img
 						src={image.src}
 						alt={image.alt}
-						class="object-cover object-center h-20 max-w-full rounded-md cursor-pointer"
+						class="object-cover object-center h-20 max-w-full cursor-pointer rounded-md"
 					/>
 				</div>
 			))

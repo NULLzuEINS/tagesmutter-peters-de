@@ -10,10 +10,10 @@ let occupancy: { [key: string]: boolean[] } = {
 };
 ---
 
-<table class="table-auto w-full border-none">
+<table class="w-full border-none table-auto">
 	<thead>
 		<tr>
-			<th class="border-none p-1"></th>
+			<th class="p-1 border-none"></th>
 			{months.map(month => (
 				<th class="p-1">{month}</th>
 			))}
@@ -24,7 +24,7 @@ let occupancy: { [key: string]: boolean[] } = {
 			<tr class="border-none">
 				<td class="py-1">{child}</td>
 				{months.map((month, index) => (
-          <td class="p-0 align-middle m-0">
+          <td class="p-0 m-0 align-middle">
 						<div class={` py-1 ${occupancy[child][index] ? 'bg-lime-500' : ''}`}></div>
 					</td>
         ))}

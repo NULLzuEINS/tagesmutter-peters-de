@@ -1,105 +1,106 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Section from '../components/Section.astro'
-import ImageGallery from '../components/ImageGallery.astro'
 import ImageCarousel from '../components/ImageCarousel.astro'
-import Calendar from '../components/Calendar.astro'
-import Children from '../components/Children.astro'
 import Contact from '../components/Contact.astro'
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Kindertagespflege in Leipzig - Jeanine Peters">
 	<main>
 		<Section>
-			<h2>Bilder-Galerie</h2>
-			<ImageGallery />
-
-			<h2>Bilder-Karussel</h2>
-			<ImageCarousel />
-
-			<Calendar />
-
+			<ImageCarousel items={[
+	{
+		src: 'images/gallery/box.jpg',
+		alt: 'Spielen in einer Box'
+	},
+	{
+		src: 'images/gallery/boxsmile.jpg',
+		alt: 'Spielen in einer Box'
+	},
+	{
+		src: 'images/gallery/laydown.jpg',
+		alt: 'Pause machen'
+	},
+	{
+		src: 'images/gallery/traindance.jpg',
+		alt: 'Spielen mit der Holzeisenbahn'
+	},
+	{
+		src: 'images/gallery/trainspotter.jpg',
+		alt: 'Train Spotter'
+	}
+]} />
 		</Section>
 
-		<Section classOutside="bg-lime-400">
-			<h2 class="pb-2 text-4xl font-bold text-lime-600" id="liebe-eltern">Liebe Eltern</h2>
-			<p class="text-slate-300">
-				<p>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, porro nesciunt numquam nisi explicabo
-					inventore tenetur autem odit animi, et harum dolorum fuga illo dolore? Voluptatum, quidem, fugiat debitis
-					facere est, hic temporibus exercitationem nemo praesentium fuga nihil! Est consectetur qui eveniet!
-				</p>
-				<p>
-					Assumenda porro a sed, similique rem hic ullam dolorem ad, ratione perspiciatis nisi laborum laudantium earum
-					quo cupiditate! Quasi quisquam rerum eos. Porro, quae ea. Molestiae temporibus quas et assumenda voluptatem
-					maiores autem aperiam itaque quasi, voluptates ipsa, repellat dolores sint. Minima?
-				</p>
-				<p>
-					Repudiandae sequi tenetur ullam, magnam dolorem, neque dicta reprehenderit odit deserunt voluptatem quae
-					asperiores aspernatur ab explicabo est officia accusamus doloribus. Qui, porro. Neque commodi dolorem adipisci
-					deserunt provident ad amet quis vel, beatae libero eaque, illo voluptatem sequi fuga nisi autem.
-				</p>
-				<p>
-					Accusantium sapiente mollitia maxime aspernatur consectetur corrupti fugit similique. Possimus iste incidunt
-					architecto aliquid nisi, fugiat corporis pariatur. Sunt qui repellat recusandae repudiandae eius at quasi
-					distinctio dolore! Reprehenderit error, pariatur ipsa provident beatae explicabo blanditiis aut nesciunt
-					aperiam ex sunt! Numquam.
-				</p>
+		<Section classOutside="bg-lime-400" classInside="text-lime-900 text-xl">
+			<h2 class="pb-2 text-4xl font-bold text-lime-900" id="liebe-eltern">Hallo liebe Eltern aus der Südvorstadt,</h2>
+			<p class="pb-4">
+				sucht ihr eine familiäre und liebevolle Betreuung für euer kleines Wunder? Mein Name ist Jeanine Peters und seit 8 Jahren habe ich das große Glück, Kinder im Alter von 1 bis 3 Jahren auf ihrem spannenden Weg der ersten Lebensjahre zu begleiten, bis sie bereit für den nächsten großen Schritt in den Kindergarten sind.
+			</p>
+
+			<p class="pb-4">
+				In meiner Tagesbetreuung legen wir großen Wert auf eine geborgene und anregende Umgebung, in der sich euer Kind frei entfalten, lernen und vor allem viel Spaß haben kann. Wir erkunden gemeinsam die Welt mit all ihren Farben, Formen und Klängen, gestalten kreative Projekte und genießen die frische Luft bei unserer täglichen Entdeckungstour durch die Südvorstadt und ihre schönen Spielplätze.
+			</p>
+
+			<p class="pb-4">
+				Ich verstehe, dass es für euch als Eltern sehr wichtig ist, euer Kind in guten Händen zu wissen. Deshalb lade ich euch herzlich zu einem persönlichen Kennenlernen ein! Bei einer Tasse Kaffee könnt ihr mehr über meine Betreuungsphilosophie erfahren, die Räumlichkeiten erkunden und alle eure Fragen stellen.
+			</p>
+
+			<p class="pb-4">
+				Gemeinsam schaffen wir eine wunderbare Zeit voller Liebe, Lachen und Lernen für euer Kind. Ich freue mich darauf, euch und euren kleinen Schatz kennenzulernen!</p>
+			</p>
+
+			<p>
+				Herzliche Grüße, Jeanine Peters
 			</p>
 		</Section>
 
 		<Section classOutside="bg-slate-700" classInside="text-slate-400 antialiased">
-			<h2 class="pt-4 pb-2 text-4xl antialiased font-bold text-lime-600" id="über-mich">Über mich</h2>
-			<p class="text-slate-300">
-				<p>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, porro nesciunt numquam nisi explicabo
-					inventore tenetur autem odit animi, et harum dolorum fuga illo dolore? Voluptatum, quidem, fugiat debitis
-					facere est, hic temporibus exercitationem nemo praesentium fuga nihil! Est consectetur qui eveniet!
-				</p>
-				<p>
-					Assumenda porro a sed, similique rem hic ullam dolorem ad, ratione perspiciatis nisi laborum laudantium earum
-					quo cupiditate! Quasi quisquam rerum eos. Porro, quae ea. Molestiae temporibus quas et assumenda voluptatem
-					maiores autem aperiam itaque quasi, voluptates ipsa, repellat dolores sint. Minima?
-				</p>
-				<p>
-					Repudiandae sequi tenetur ullam, magnam dolorem, neque dicta reprehenderit odit deserunt voluptatem quae
-					asperiores aspernatur ab explicabo est officia accusamus doloribus. Qui, porro. Neque commodi dolorem adipisci
-					deserunt provident ad amet quis vel, beatae libero eaque, illo voluptatem sequi fuga nisi autem.
-				</p>
-				<p>
-					Accusantium sapiente mollitia maxime aspernatur consectetur corrupti fugit similique. Possimus iste incidunt
-					architecto aliquid nisi, fugiat corporis pariatur. Sunt qui repellat recusandae repudiandae eius at quasi
-					distinctio dolore! Reprehenderit error, pariatur ipsa provident beatae explicabo blanditiis aut nesciunt
-					aperiam ex sunt! Numquam.
-				</p>
+			<h2 class="pt-4 pb-2 text-4xl antialiased font-bold text-slate-200" id="über-mich">Über mich</h2>
+
+			<p class="pb-4">
+				ich bin Jeanine Peters, leidenschaftliche Tagesmutter und gelernte Ergotherapeutin. Seit 8 Jahren unterstütze ich Familien dabei, ihren Kindern einen liebevollen und fördernden Start ins Leben zu ermöglichen. Mein eigenes Zuhause in Leipzig bietet eine warme und sichere Umgebung, in der Kinder im Alter von 1 bis 3 Jahren spielerisch die Welt entdecken.
 			</p>
+
+			<p class="pb-4">
+				Als Mutter von zwei Kindern verstehe ich die Sorgen und Wünsche, die ihr als Eltern habt. Deshalb lege ich großen Wert auf eine enge und vertrauensvolle Zusammenarbeit mit euch, um eurem Kind die beste Unterstützung auf seinem Weg zu bieten.
+			</p>
+
+			<p class="pb-4">
+				Ich lade euch herzlich ein, mich und meine Betreuung kennenzulernen. Lasst uns gemeinsam einen glücklichen und liebevollen Rahmen für die Entwicklung eurer Kinder schaffen.
+			</p>
+				
 		</Section>
 
-		<Section classOutside="bg-lime-200">
-			<h2 class="pt-4 pb-2 text-4xl font-bold text-lime-600" id="leistungen">Leistungen</h2>
-			<p class="text-slate-300">
-				<p>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, porro nesciunt numquam nisi explicabo
-					inventore tenetur autem odit animi, et harum dolorum fuga illo dolore? Voluptatum, quidem, fugiat debitis
-					facere est, hic temporibus exercitationem nemo praesentium fuga nihil! Est consectetur qui eveniet!
-				</p>
-				<p>
-					Assumenda porro a sed, similique rem hic ullam dolorem ad, ratione perspiciatis nisi laborum laudantium earum
-					quo cupiditate! Quasi quisquam rerum eos. Porro, quae ea. Molestiae temporibus quas et assumenda voluptatem
-					maiores autem aperiam itaque quasi, voluptates ipsa, repellat dolores sint. Minima?
-				</p>
-				<p>
-					Repudiandae sequi tenetur ullam, magnam dolorem, neque dicta reprehenderit odit deserunt voluptatem quae
-					asperiores aspernatur ab explicabo est officia accusamus doloribus. Qui, porro. Neque commodi dolorem adipisci
-					deserunt provident ad amet quis vel, beatae libero eaque, illo voluptatem sequi fuga nisi autem.
-				</p>
-				<p>
-					Accusantium sapiente mollitia maxime aspernatur consectetur corrupti fugit similique. Possimus iste incidunt
-					architecto aliquid nisi, fugiat corporis pariatur. Sunt qui repellat recusandae repudiandae eius at quasi
-					distinctio dolore! Reprehenderit error, pariatur ipsa provident beatae explicabo blanditiis aut nesciunt
-					aperiam ex sunt! Numquam.
-				</p>
-			</p>
+		<Section classOutside="bg-slate-200" classInside="text-slate-800 antialiased">
+			<h2 class="pt-4 pb-2 text-4xl antialiased font-bold" id="einrichtung">Die Einrichtung und die Umgebung</h2>
+	<ImageCarousel caption={true} items={[
+	{
+		src: 'images/einrichtung/tagesmutter-leipzig-spielzimmer-fenster.jpg',
+		alt: 'Spielzimmer'
+	},
+	{
+		src: 'images/einrichtung/tagesmutter-leipzig-kueche.jpg',
+		alt: 'Küche'
+	},
+	{
+		src: 'images/einrichtung/tagesmutter-leipzig-schlafzimmer.jpg',
+		alt: 'Schlafzimmer'
+	},
+	{
+		src: 'images/einrichtung/tagesmutter-leipzig-flur.jpg',
+		alt: 'Flur'
+	},
+	{
+		src: 'images/einrichtung/tagesmutter-leipzig-hof.jpg',
+		alt: 'Hof'
+	},
+	{
+		src: 'images/einrichtung/tagesmutter-leipzig-fuchs.jpg',
+		alt: 'Spielzimmer mit dem Fuchs'
+	}
+]}/>
+				
 		</Section>
 
 		<Contact />
