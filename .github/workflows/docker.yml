@@ -23,7 +23,9 @@ jobs:
     - name: Build Docker image
       run: |
         docker build . --tag ghcr.io/nullzueins/tagesmutter-peters-de/app:latest
+        docker tag ghcr.io/nullzueins/tagesmutter-peters-de/app:latest ghcr.io/nullzueins/tagesmutter-peters-de/app:${{ steps.git_tag.outputs.tag }}
 
     - name: Push Docker image
       run: |
         docker push ghcr.io/nullzueins/tagesmutter-peters-de/app:latest
+        docker push ghcr.io/nullzueins/tagesmutter-peters-de/app:${{ steps.git_tag.outputs.tag }}
