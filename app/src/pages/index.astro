@@ -8,30 +8,6 @@ import GoogleMap from '../components/GoogleMap.astro'
 
 <Layout title="Tagesmutter in Leipzig - Jeanine Peters">
 	<main>
-		<Section>
-			<ImageCarousel items={[
-	{
-		src: 'images/gallery/box.jpg',
-		alt: 'Spielen in einer Box'
-	},
-	{
-		src: 'images/gallery/boxsmile.jpg',
-		alt: 'Spielen in einer Box'
-	},
-	{
-		src: 'images/gallery/laydown.jpg',
-		alt: 'Pause machen'
-	},
-	{
-		src: 'images/gallery/traindance.jpg',
-		alt: 'Spielen mit der Holzeisenbahn'
-	},
-	{
-		src: 'images/gallery/trainspotter.jpg',
-		alt: 'Train Spotter'
-	}
-]} />
-		</Section>
 
 		<Section classOutside="bg-lime-400" classInside="text-lime-900 text-xl antialiased">
 			<h2 class="pb-2 text-4xl font-bold text-lime-900" id="liebe-eltern">Hallo liebe Eltern aus der Südvorstadt,</h2>
@@ -115,34 +91,6 @@ import GoogleMap from '../components/GoogleMap.astro'
 			</p>
 
 			<GoogleMap />
-			
-			<ImageCarousel caption={true} items={[
-				{
-					src: 'images/einrichtung/tagesmutter-leipzig-spielzimmer-fenster.jpg',
-					alt: 'Spielzimmer'
-				},
-				{
-					src: 'images/einrichtung/tagesmutter-leipzig-kueche.jpg',
-					alt: 'Küche'
-				},
-				{
-					src: 'images/einrichtung/tagesmutter-leipzig-schlafzimmer.jpg',
-					alt: 'Schlafzimmer'
-				},
-				{
-					src: 'images/einrichtung/tagesmutter-leipzig-flur.jpg',
-					alt: 'Flur'
-				},
-				{
-					src: 'images/einrichtung/tagesmutter-leipzig-hof.jpg',
-					alt: 'Hof'
-				},
-				{
-					src: 'images/einrichtung/tagesmutter-leipzig-fuchs.jpg',
-					alt: 'Spielzimmer'
-				}
-			]}/>
-		</Section>
 
 		<Contact />
 	</main>

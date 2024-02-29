@@ -1,0 +1,54 @@
+
+			<ImageCarousel caption={true} items={[
+				{
+					src: 'images/einrichtung/tagesmutter-leipzig-spielzimmer-fenster.jpg',
+					alt: 'Spielzimmer'
+				},
+				{
+					src: 'images/einrichtung/tagesmutter-leipzig-kueche.jpg',
+					alt: 'Küche'
+				},
+				{
+					src: 'images/einrichtung/tagesmutter-leipzig-schlafzimmer.jpg',
+					alt: 'Schlafzimmer'
+				},
+				{
+					src: 'images/einrichtung/tagesmutter-leipzig-flur.jpg',
+					alt: 'Flur'
+				},
+				{
+					src: 'images/einrichtung/tagesmutter-leipzig-hof.jpg',
+					alt: 'Hof'
+				},
+				{
+					src: 'images/einrichtung/tagesmutter-leipzig-fuchs.jpg',
+					alt: 'Spielzimmer'
+				}
+			]}/>
+		</Section>
+
+
+		<Section>
+			<ImageCarousel items={[
+	{
+		src: 'images/gallery/box.jpg',
+		alt: 'Spielen in einer Box'
+	},
+	{
+		src: 'images/gallery/boxsmile.jpg',
+		alt: 'Spielen in einer Box'
+	},
+	{
+		src: 'images/gallery/laydown.jpg',
+		alt: 'Pause machen'
+	},
+	{
+		src: 'images/gallery/traindance.jpg',
+		alt: 'Spielen mit der Holzeisenbahn'
+	},
+	{
+		src: 'images/gallery/trainspotter.jpg',
+		alt: 'Train Spotter'
+	}
+]} />
+		</Section>
