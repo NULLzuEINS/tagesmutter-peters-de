@@ -12,7 +12,7 @@ const { items, caption  } = Astro.props as Props;
 ---
 
 <div id="default-carousel" class="relative w-full my-6" data-carousel="slide">
-	<div class="relative overflow-hidden rounded-lg h-64 md:h-96">
+	<div class="relative h-64 overflow-hidden rounded-lg md:h-96">
 		{
 			items.map((image) => (
 				<figure class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -23,7 +23,7 @@ const { items, caption  } = Astro.props as Props;
 					/>
 
 					{caption && 
-					<figcaption class="absolute bottom-0 flex items-start justify-center w-full h-32 md:h-24 pt-4 text-3xl md:text-xl font-semibold text-gray-300 bg-gray-800 bg-opacity-50 dark:bg-gray-800">
+					<figcaption class="absolute bottom-0 flex items-start justify-center w-full h-32 pt-4 text-3xl font-semibold text-gray-300 bg-gray-800 md:h-24 md:text-xl bg-opacity-50 dark:bg-gray-800">
 						{image.alt}
 					</figcaption>
 					}
@@ -37,7 +37,7 @@ const { items, caption  } = Astro.props as Props;
 			items.map((image) => (
 		<button
 			type="button"
-			class="h-5 w-5 md:w-3 md:h-3 rounded-full"
+			class="w-5 h-5 rounded-full md:w-3 md:h-3"
 			aria-current="true"
 			aria-label={image.alt}
 			title={image.alt}
