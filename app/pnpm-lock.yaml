@@ -17,9 +17,6 @@ dependencies:
   astro:
     specifier: ^4.2.5
     version: 4.2.5(typescript@5.3.3)
-  flowbite:
-    specifier: ^2.2.1
-    version: 2.2.1
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.1
@@ -694,10 +691,6 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
-
-  /@popperjs/core@2.11.8:
-    resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
-    dev: false
 
   /@rollup/wasm-node@4.12.0:
     resolution: {integrity: sha512-sqy3+YvV/uWX6bPZOR5PlEdH6xyMPXoelllRQ/uZ13tzy9f4pXZTbajnoWN8IHHXwTNKPiLzsePLiDEVmkxMNw==}
@@ -1619,13 +1612,6 @@ packages:
   /flattie@1.1.0:
     resolution: {integrity: sha512-xU99gDEnciIwJdGcBmNHnzTJ/w5AT+VFJOu6sTB6WM8diOYNA3Sa+K1DiEBQ7XH4QikQq3iFW1U+jRVcotQnBw==}
     engines: {node: '>=8'}
-    dev: false
-
-  /flowbite@2.2.1:
-    resolution: {integrity: sha512-iiZyBTtriEDRHrqXZgpKHaxl4B2J8HZUP8Yn1RXozUDKszWHDVj4GxQqMMB9AJHRWOgXV/4E/LJZ/zqQgBUhWA==}
-    dependencies:
-      '@popperjs/core': 2.11.8
-      mini-svg-data-uri: 1.4.4
     dev: false
 
   /foreground-child@3.1.1:
@@ -2553,11 +2539,6 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
-
-  /mini-svg-data-uri@1.4.4:
-    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
-    hasBin: true
-    dev: false
 
   /minimatch@9.0.3:
     resolution: {integrity: sha512-RHiac9mvaRw0x3AYRgDC1CxAP7HTcNrrECeA8YYJeWnpo+2Q5CegtZjaotWTWxDG3UeGA1coE05iH1mPjT/2mg==}
