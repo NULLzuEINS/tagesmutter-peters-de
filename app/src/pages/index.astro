@@ -2,48 +2,59 @@
 import Layout from '../layouts/Layout.astro'
 import Section from '../components/Section.astro'
 import ImageCarousel from '../components/ImageCarousel.astro'
+import Cartoon from '../components/Cartoon.astro'
 import Contact from '../components/Contact.astro'
 import GoogleMap from '../components/GoogleMap.astro'
 ---
 
 <Layout title="Tagesmutter in Leipzig - Jeanine Peters">
+
+	<Cartoon class="w-20 h-auto" />
 	<main>
 
 		<Section classOutside="bg-lime-400 dark:bg-slate-800" classInside="text-lime-900 dark:text-slate-200 text-xl antialiased" id="liebe-eltern">
-			<h2 class="pb-2 text-4xl font-bold ">Hallo liebe Eltern aus der Südvorstadt,</h2>
-			<p class="pb-4">
-				sucht ihr eine familiäre und liebevolle Betreuung für euer Kind? 
-				Mein Name ist Jeanine Peters und seit 8 Jahren habe ich das große Glück, 
-				Kinder im Alter von 1 bis 3 Jahren auf ihrem spannenden Weg der ersten 
-				Lebensjahre zu begleiten, bis sie bereit für den nächsten großen Schritt 
-				in den Kindergarten sind.
+			<h2 class="pb-2 text-4xl font-bold ">Tagesmutter Jeanine Peters</h2>
+			<address class="pb-1">
+				Steinstraße 62<br/>
+				04275 Leipzig
+			</address>
+				
+			<p class="mb-3 text-sm">
+				<a href="https://maps.app.goo.gl/jzU8Tnb2iCeyxCfR6" class="underline" target="_blank">Google Maps</a>
 			</p>
 
-			<p class="pb-4">
-				In meiner Tagesbetreuung lege ich großen Wert auf eine geborgene und 
-				anregende Umgebung, in der sich euer Kind frei entfalten, lernen und 
-				vor allem viel Spaß haben kann. 
-				Ich erkunden gemeinsam die Welt mit all ihren Farben, Formen und Klängen, 
-				gestalten kreative Projekte und genießen die frische Luft bei unserer 
-				täglichen Entdeckungstour durch die Südvorstadt und ihre schönen Spielplätze.
+
+			<h3 class="pt-8 pb-1 text-xl font-semibold">Kontakt</h3>
+			<p class="flex space-x-4 justify-center text-center p-10 bg-slate-700 rounded my-3">
+				<a
+						href="tel:+4915750000000"
+						class="text-sky-900 bg-sky-400 hover:bg-sky-600 focus:ring-4 focus:ring-sky-300 font-semibold rounded-sm  px-4 lg:px-5 py-2 lg:py-2.5  focus:outline-none dark:focus:ring-gray-200"
+						>Anrufen</a
+					>
+				<a
+						href="whatsapp://send?phone=+4915750000000"
+						class="text-lime-900 bg-[#5FFC7B] hover:bg-[#28D146] focus:ring-4 focus:ring-[#28D146]-300 font-semibold rounded-sm px-4 lg:px-5 py-2 lg:py-2.5  focus:outline-none dark:focus:ring-gray-200"
+						>Whatsapp</a
+					>
+				<a
+						href="telegram://resolve?domain=vergissberlin"
+						class="text-lime-900 bg-[#27A7E7] hover:bg-[#ffffff] focus:ring-4 focus:ring-[#28D146]-300 font-semibold rounded-sm px-4 lg:px-5 py-2 lg:py-2.5  focus:outline-none dark:focus:ring-gray-200"
+						>Telegram</a
+					>
+				<a
+						href="mailto:peters.jeanine@gmail.com"
+						class="text-lime-900 bg-[#EA4335] hover:bg-[#5F6368] focus:ring-4 focus:ring-[#28D146]-300 font-semibold rounded-sm px-4 lg:px-5 py-2 lg:py-2.5  focus:outline-none dark:focus:ring-gray-200"
+						>E-Mail</a
+					>
+			</p>
+			<p class="pb-4 text-sm text-center">
+				Telefon: <a href="tel:+4915750000000" class="underline">0157 50000000</a>,
+				Email: <a href="mailto:peters.jeanine@gmail.com" class="underline">peters.jeanine@gmail.com</a>
 			</p>
 
+				<h3 class="pt-8 pb-1 text-xl font-semibold">Öffnungszeiten</h3>
 			<p class="pb-4">
-				Ich verstehe, dass es für euch als Eltern sehr wichtig ist, euer Kind 
-				in guten Händen zu wissen. Deshalb lade ich euch herzlich zu einem 
-				persönlichen Kennenlernen ein! Bei einer Tasse Kaffee könnt ihr mehr 
-				über meine Betreuungsphilosophie erfahren, die Räumlichkeiten erkunden 
-				und alle eure Fragen stellen.
-			</p>
-
-			<p class="pb-4">
-				Gemeinsam schaffen wir eine wunderbare Zeit voller Liebe, Lachen und 
-				Lernen für euer Kind. Ich freue mich darauf, euch und euren kleinen 
-				Schatz kennenzulernen!
-			</p>
-
-			<p>
-				Herzliche Grüße, Jeanine Peters
+				Montag bis Freitag: 8:30 - 15:30 Uhr<br/>
 			</p>
 		</Section>
 
@@ -67,31 +78,5 @@ import GoogleMap from '../components/GoogleMap.astro'
 				
 		</Section>
 
-		<Section classOutside="bg-slate-200 dark:bg-slate-900" classInside="text-slate-800 dark:text-slate-400 text-xl antialiased" id="einrichtung">
-			<h2 class="pt-4 pb-2 text-4xl antialiased font-bold" >Die Einrichtung und die Umgebung</h2>
-			<p>
-				Meine liebevoll eingerichtete Tagespflege befindet sich in der Steinstraße 86, 
-				im Herzen der Leipziger Südvorstadt – ein familienfreundliches Viertel mit 
-				zahlreichen Grünflächen und Spielplätzen. 
-			</p>
-
-			<p class="pb-4">
-				Die Wohnung für die Kinderbetreuung, ausgerichtet für 1- bis 3-Jährige, 
-				befindet sich im Erdgeschoss und ist hell sowie sicher gestaltet, 
-				inklusive eines verdunkelbaren Schlafzimmers für den Mittagsschlaf. 
-			</p>
-
-			<p class="pb-4">
-				Im Innenhof befindet sich ein eigener Spielplatz, der viel Raum für Bewegung 
-				und Entdeckungen im Freien bietet. Die Mahlzeiten, 	frisch und kindgerecht, 
-				kommen täglich von einem verlässlichen Lieferanten. 
-				<br/>
-				In dieser Umgebung biete ich, Jeanine Peters, eine Atmosphäre, 
-				in der sich Kinder wohl und geborgen fühlen.
-			</p>
-
-			<GoogleMap />
-
-		<Contact />
 	</main>
 </Layout>
