@@ -1,5 +1,7 @@
 ---
-
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <header class="h-screen bg-cover sm:h-auto" style="background-image: url('/images/leipzig.jpg">
@@ -8,10 +10,10 @@
 			<img src="/images/jeanine-peters.png" alt="Portrait von Jeanine Peters" class="w-64 h-64 mb-4 border-8 rounded-full dark:border-slate-800 border-slate-300 border-opacity-25 dark:border-opacity-35 shadow-2xl" />
 		</div>
 		<h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-300 dark:text-stone-300 dark:opacity-50 drop-shadow gray-300 md:text-5xl lg:text-6xl"
-		>Tagesmutter in Leipzig</h1>
+		>{t('document.title')}</h1>
 		<hr class="inline-block w-2/6 h-1 mb-3" />
 		<p class="font-medium drop-shadow text-stone-400 dark:text-stone-500">
-			<em class="italic">Jeanine Peters</em> - Ausgebildete Tagesmutter und Ergotherapeutin in der Südvorstadt von Leipzig
+			<em class="italic">Jeanine Peters</em> - {t('document.subTitle')}
 		</p>
 	</div>
 </header>

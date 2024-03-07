@@ -4,19 +4,24 @@ interface Props {
 }
 
 const { title } = Astro.props
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
   <header class="sticky top-0 z-50 w-full">
 
 	<nav class="px-4 py-3 bg-lime-500 border-lime-200 lg:px-6 dark:bg-slate-900">
 		<div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
 			<a href="https://tagesmutter-peters.de" class="flex items-center self-center text-xl antialiased font-semibold uppercase whitespace-nowrap text-slate-800 dark:text-slate-200">
-				<span >{title}</span> <span class="hidden pl-2 sm:inline">Jeanine Peters</span>
+				<span>{t('header.childdaycare')}</span> <span class="hidden pl-2 sm:inline">Jeanine Peters</span>
 			</a>
 			<div class="flex items-center lg:order-2">
 				<a
 					href="#kontakt"
 					class="text-lime-900 bg-lime-400 dark:hover:bg-slate-500 hover:bg-lime-600 focus:ring-4 focus:ring-lime-300 font-semibold rounded-sm text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none dark:focus:ring-gray-200"
-					>Kontakt</a
+					>{t('nav.contact')}</a
 				>
 				<button
 					data-collapse-toggle="mobile-menu-2"
@@ -25,7 +30,7 @@ const { title } = Astro.props
 					aria-controls="mobile-menu-2"
 					aria-expanded="false"
 				>
-					<span class="sr-only">Das Menü öffnen</span>
+					<span class="sr-only">{t('nav.opener')}</span>
 					<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
 						><path
 							fill-rule="evenodd"
@@ -46,14 +51,14 @@ const { title } = Astro.props
 						<a
 							href="#kontakt"
 							class="block p-2 pl-3 pr-4 text-gray-700 transition-colors duration-200 rounded-sm dark:text-slate-300 hover:bg-slate-700 focus:bg-slate-700 active:bg-slate-800 hover:text-slate-200 focus:text-slate-200 active:text-slate-400 lg:p-5 focus:outline-none focus:ring-2 focus:ring-lime-300 dark:hover:bg-slate-800 dark:focus:ring-slate-300"
-							>Einrichtung</a
+							>{t('nav.environment')}</a
 						>
 					</li>
 					<li>
 						<a
 							href="#über-mich"
 							class="block p-2 pl-3 pr-4 text-gray-700 transition-colors duration-200 rounded-sm dark:text-slate-300 hover:bg-slate-700 focus:bg-slate-700 active:bg-slate-800 hover:text-slate-200 focus:text-slate-200 active:text-slate-400 lg:p-5 focus:outline-none focus:ring-2 focus:ring-lime-300 dark:hover:bg-slate-800 dark:focus:ring-slate-300"
-							>Über mich</a
+							>{t('nav.about')}</a
 						>
 					</li>
 				</ul>

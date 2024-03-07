@@ -9,10 +9,13 @@ import Hero from '../components/Hero.astro'
 import Jsonld from '../components/Jsonld.astro'
 import '../css/styles.css';
 const { title } = Astro.props
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
-<html lang="de" class="scroll-smooth">
+<html lang={lang} class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
