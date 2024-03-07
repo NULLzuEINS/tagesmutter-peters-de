@@ -5,9 +5,11 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="container max-w-4xl px-4 md:py-12 mx-auto">
-	<picture>
-		<img src="/images/kindergarten-cartoon.png" alt={t('cartoon.alt3')} title={t('cartoon.alt3')} class="w-full h-auto block md:hidden " />
-		<img src="/images/kindergarten-full-transparent.png" alt={t('cartoon.alt5')} title={t('cartoon.alt5')} class="w-full h-auto hidden md:block" />
-	</picture>
+<div class="bg-lime-100 dark:bg-transparent">
+	<div class="max-w-4xl px-4 md:py-12 mx-auto">
+		<picture>
+			<img src="/images/kindergarten-cartoon.png" alt={t('cartoon.alt3')} title={t('cartoon.alt3')} class="w-full h-auto block md:hidden " />
+			<img src="/images/kindergarten-full-transparent.png" alt={t('cartoon.alt5')} title={t('cartoon.alt5')} class="w-full h-auto hidden md:block" />
+		</picture>
+	</div>
 </div>
