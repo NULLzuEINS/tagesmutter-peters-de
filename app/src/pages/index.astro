@@ -12,12 +12,25 @@ import GoogleMap from '../components/GoogleMap.astro'
 	<Cartoon class="w-20 h-auto" />
 	<main>
 
-		<Section classOutside="bg-lime-400 dark:bg-slate-800" classInside="text-lime-900 dark:text-slate-200 text-xl antialiased" id="liebe-eltern">
-			<h2 class="pb-2 text-4xl font-bold ">Tagesmutter Jeanine Peters</h2>
-			<address class="pb-1">
-				Steinstraße 62<br/>
-				04275 Leipzig
-			</address>
+		<Section classOutside="bg-lime-400 dark:bg-slate-800" classInside="text-lime-900 dark:text-slate-200 text-xl antialiased" id="kontakt">
+			<h2 class="pb-2 text-4xl font-bold ">Jeanine Peters</h2>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+				<div>
+					<h3 class="pt-8 pb-1 text-xl font-semibold">Adresse</h3>
+					<address class="pb-1">
+						Steinstraße 62<br/>
+						04275 Leipzig
+					</address>
+				</div>
+
+				<div>
+					<h3 class="pt-8 pb-1 text-xl font-semibold">Öffnungszeiten</h3>
+					<p class="pb-4">
+						Montag bis Freitag: 8:30 - 15:30 Uhr<br/>
+					</p>
+				</div>
+			</div>
 				
 			<p class="mb-3 text-sm">
 				<a href="https://maps.app.goo.gl/jzU8Tnb2iCeyxCfR6" class="underline" target="_blank">Google Maps</a>
@@ -25,7 +38,6 @@ import GoogleMap from '../components/GoogleMap.astro'
 
 			<h3 class="pt-8 pb-1 text-xl font-semibold">Kontakt</h3>
 			<div class="flex flex-col md:flex-row justify-around md:space-x-2 space-y-2 md:space-y-0  p-2 md:p-10 text-center bg-slate-700 rounded my-3">
-			
 				<a
 						href="whatsapp://send?phone=+4915750000000"
 						class="text-lime-900 bg-[#5FFC7B] hover:bg-[#28D146] focus:ring-4 focus:ring-[#28D146]-300 font-semibold rounded-sm px-4 lg:px-5 py-2 lg:py-2.5 focus:outline-none dark:focus:ring-gray-200"
@@ -52,14 +64,10 @@ import GoogleMap from '../components/GoogleMap.astro'
 				Email: <a href="mailto:peters.jeanine@gmail.com" class="underline">peters.jeanine@gmail.com</a>
 			</p>
 
-				<h3 class="pt-8 pb-1 text-xl font-semibold">Öffnungszeiten</h3>
-			<p class="pb-4">
-				Montag bis Freitag: 8:30 - 15:30 Uhr<br/>
-			</p>
 		</Section>
 
 		<Section classOutside="bg-slate-700 dark:bg-slate-800" classInside="text-slate-400 dark:text-slate-400 text-xl antialiased" id="über-mich">
-			<h2 class="pt-4 pb-2 text-4xl font-bold">Über mich</h2>
+			<h2 class="pt-2 pb-2 text-4xl font-bold">Über mich</h2>
 
 			<p class="pb-4">
 				ich bin Jeanine Peters, leidenschaftliche Tagesmutter und gelernte Ergotherapeutin. 
