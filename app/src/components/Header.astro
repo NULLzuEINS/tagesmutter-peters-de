@@ -1,10 +1,4 @@
 ---
-interface Props {
-	title: string
-}
-
-const { title } = Astro.props
-
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
