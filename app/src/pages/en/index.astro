@@ -1,69 +1,16 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 import Section from '../../components/Section.astro'
-import ImageCarousel from '../../components/ImageCarousel.astro'
 import Cartoon from '../../components/Cartoon.astro'
 import Contact from '../../components/Contact.astro'
-import GoogleMap from '../../components/GoogleMap.astro'
 ---
 
 <Layout title="Tagesmutter in Leipzig - Jeanine Peters">
 
 	<Cartoon class="w-20 h-auto" />
 	<main>
-
 		<Section classOutside="bg-lime-400 dark:bg-slate-800" classInside="text-lime-900 dark:text-slate-200 text-xl antialiased" id="kontakt">
-			<h2 class="pb-2 text-4xl font-bold ">Jeanine Peters</h2>
-			
-			<div class="grid grid-cols-1 md:grid-cols-2 md:gap-4">
-				<div>
-					<h3 class="pt-1 md:pt-8 pb-1 text-xl font-semibold">Address</h3>
-					<address class="pb-1">
-						Steinstraße 62<br/>
-						04275 Leipzig
-					</address>
-					<p class="mt-2 md:mb-3 text-sm">
-						<a href="https://maps.app.goo.gl/jzU8Tnb2iCeyxCfR6" class="py-2 px-4 dark:text-slate-800 font-semibold  bg-lime-200 hover:bg-lime-300 active:bg-lime-300 rounded" target="_blank">Google Maps</a>
-					</p>
-				</div>
-
-				<div>
-					<h3 class="pt-5 md:pt-8 pb-1 text-xl font-semibold">Opening hours</h3>
-					<p class="md:pb-4">
-						Monday to Friday: 8:30 am - 3:30 pm<br/>
-					</p>
-				</div>
-			</div>
-				
-
-			<h3 class="pt-8 pb-1 text-xl font-semibold">Kontakt</h3>
-			<div class="flex flex-col md:flex-row justify-around md:space-x-2 space-y-4 md:space-y-0 p-4 md:p-10 text-center bg-slate-700 rounded my-3">
-				<a
-						href="whatsapp://send?phone=+491639284617"
-						class="text-slate-800 bg-[#5FFC7B] hover:bg-[#28D146] focus:ring-4 focus:ring-[#28D146]-300 font-semibold rounded-sm px-4 lg:px-5 py-2 lg:py-2.5 focus:outline-none dark:focus:ring-gray-200"
-						>Whatsapp</a
-					>
-				<a
-						href="tel:+491639284617"
-						class="text-slate-800 bg-sky-400 hover:bg-sky-600 focus:ring-4 focus:ring-sky-300 font-semibold rounded-sm px-4 lg:px-5 py-2 lg:py-2.5  focus:outline-none dark:focus:ring-gray-200"
-						>Call</a
-					>
-				<a
-						href="https://t.me/vergissberlin"
-						class="text-slate-800 bg-[#27A7E7] hover:bg-[#ffffff] focus:ring-4 focus:ring-[#28D146]-300 font-semibold rounded-sm px-4 lg:px-5 py-2 lg:py-2.5  focus:outline-none dark:focus:ring-gray-200"
-						>Telegram</a
-					>
-				<a
-						href="mailto:peters.jeanine@gmail.com"
-						class="text-slate-800 bg-[#EA4335] hover:bg-[#5F6368] focus:ring-4 focus:ring-[#28D146]-300 font-semibold rounded-sm px-4 lg:px-5 py-2 lg:py-2.5  focus:outline-none dark:focus:ring-gray-200"
-						>Email</a
-					>
-			</div>
-			<p class="pb-4 text-sm text-center">
-				Telephone: <a href="tel:+491639284617" class="underline">+49 163 9284617</a>,
-				Email: <a href="mailto:peters.jeanine@gmail.com" class="underline">peters.jeanine@gmail.com</a>
-			</p>
-
+			<Contact />
 		</Section>
 
 		<Section classOutside="bg-slate-700 dark:bg-slate-800" classInside="text-slate-400 dark:text-slate-400 text-xl antialiased" id="über-mich">

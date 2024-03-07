@@ -1,32 +1,56 @@
 ---
-import Section from './Section.astro'
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
-
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<Section id="kontakt" >
-	<h2 class="pt-4 pb-2 mb-6 text-4xl font-bold text-lime-600 dark:text-lime-700">Unverbindliche Anfrage</h2>
+<h2 class="pb-2 text-4xl font-bold ">Jeanine Peters</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 md:gap-4">
+				<div>
+					<h3 class="pt-1 md:pt-8 pb-1 text-xl font-semibold">{t('contact.address')}</h3>
+					<address class="pb-1">
+						Steinstraße 62<br/>
+						04275 Leipzig
+					</address>
+					<p class="mt-2 md:mb-3 text-sm">
+						<a href="https://maps.app.goo.gl/jzU8Tnb2iCeyxCfR6" class="text-slate-800 font-semibold py-2 px-4 bg-lime-200 hover:bg-lime-300 active:bg-lime-300 rounded" target="_blank">Google Maps</a>
+					</p>
+				</div>
 
-	<form class="max-w-md mx-auto text-xl" action="mailto:peters.jeanine@gmail.com?subject=Anfrage Kindertagespflege" enctype="text/plain" method="post">
-		<div class="grid md:grid-cols-2 md:gap-6">
-			<div class="relative z-0 w-full mb-5 group">
-					<input type="text" name="vorname" id="vorname" spellcheck="false" autocomplete="false" class="block py-2.5 px-0 w-full text-2xl text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-lime-500 focus:outline-none focus:ring-0 focus:border-lime-600 peer" placeholder=" " required />
-					<label for="vorname" class="peer-focus:font-medium absolute text-md text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-lime-600 peer-focus:dark:text-lime-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Vorname</label>
+				<div>
+					<h3 class="pt-5 md:pt-8 pb-1 text-xl font-semibold">{t('contact.openingHours')}</h3>
+					<p class="md:pb-4">
+						{t('contact.openingHoursMoFr')}: 8:30 - 15:30 Uhr<br/>
+					</p>
+				</div>
 			</div>
-			<div class="relative z-0 w-full mb-5 group">
-					<input type="text" name="nachname" id="nachname" spellcheck="false" autocomplete="false" class="block py-2.5 px-0 w-full text-2xl text-gray-800 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-lime-500 focus:outline-none focus:ring-0 focus:border-lime-600 peer" placeholder=" " required />
-					<label for="nachname" class="peer-focus:font-medium absolute text-md text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-lime-600 peer-focus:dark:text-lime-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nachname</label>
-			</div>
-		</div>
 
-		<div class="relative z-0 w-full mb-5 group">
-			<input type="tel" name="telefon" id="telefon" class="block py-2.5 px-0 w-full text-2xl text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-lime-500 focus:outline-none focus:ring-0 focus:border-lime-600 peer" placeholder=" " required />
-			<label for="telefon" class="peer-focus:font-medium absolute text-md text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-lime-600 peer-focus:dark:text-lime-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Telefonnummer</label>
-		</div>
-		
-		<div class="text-right">
-			<button type="submit" class="text-white text-xl bg-lime-500 hover:bg-lime-600 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-xs w-full sm:w-auto px-5 py-2.5 text-center dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800 mv-4">Absenden</button>
-		</div>
-	</form>
-</Section>
+			<h3 class="pt-8 pb-1 text-xl font-semibold">{t('contact.contact')}</h3>
+			<div class="flex flex-col md:flex-row justify-around md:space-x-2 space-y-4 md:space-y-0 p-4 md:p-10 text-center bg-slate-700 rounded my-3">
+				<a
+						href="whatsapp://send?phone=+491639284617"
+						class="text-slate-800 bg-[#5FFC7B] hover:bg-[#28D146] focus:ring-4 focus:ring-[#28D146]-300 font-semibold rounded-sm px-4 lg:px-5 py-2 lg:py-2.5 focus:outline-none dark:focus:ring-gray-200"
+						>{t('contact.whatsapp')}</a
+					>
+				<a
+						href="tel:+491639284617"
+						class="text-slate-800 bg-sky-400 hover:bg-sky-600 focus:ring-4 focus:ring-sky-300 font-semibold rounded-sm px-4 lg:px-5 py-2 lg:py-2.5  focus:outline-none dark:focus:ring-gray-200"
+						>{t('contact.call')}</a
+					>
+				<a
+						href="https://t.me/vergissberlin"
+						class="text-slate-800 bg-[#27A7E7] hover:bg-[#ffffff] focus:ring-4 focus:ring-[#28D146]-300 font-semibold rounded-sm px-4 lg:px-5 py-2 lg:py-2.5  focus:outline-none dark:focus:ring-gray-200"
+						>{t('contact.telegram')}</a
+					>
+				<a
+						href="mailto:peters.jeanine@gmail.com"
+						class="text-slate-800 bg-[#EA4335] hover:bg-[#5F6368] focus:ring-4 focus:ring-[#28D146]-300 font-semibold rounded-sm px-4 lg:px-5 py-2 lg:py-2.5  focus:outline-none dark:focus:ring-gray-200"
+						>{t('contact.email')}</a
+					>
+			</div>
+			<p class="pb-4 text-sm text-center">
+				{t('contact.phone')}: <a href="tel:+491639284617" class="underline">+49 163 9284617</a>,
+				{t('contact.email')}: <a href="mailto:peters.jeanine@gmail.com" class="underline">peters.jeanine@gmail.com</a>
+			</p>
 
