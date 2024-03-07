@@ -10,24 +10,26 @@ import Jsonld from '../components/Jsonld.astro'
 import '../css/styles.css';
 const { title } = Astro.props
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
-
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <!doctype html>
 <html lang={lang} class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={t('document.description')} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="alternate" hreflang="de" href="/de/" />
+		<link rel="alternate" hreflang="en" href="/en/" />
+		<link rel="alternate" hreflang="ua" href="/ua/" />
 		<link rel="manifest" href="/manifest.json">
-		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
 		<title>{title}</title>
 	</head>
 	<body class="bg-gray-100 dark:bg-slate-800">
-		<Header title="Tagesmutter" />
+		<Header />
 		<Hero />
 		<slot />
 		<Footer />
